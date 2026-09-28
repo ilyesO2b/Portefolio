@@ -386,6 +386,19 @@
   }
   @media (max-width:600px){ .ticket-fields{grid-template-columns:1fr;} }
   .ticket-fields div span.k{color:var(--text-dim); display:block; font-size:0.78rem; margin-bottom:2px;}
+  .shot-row{display:flex; gap:10px; margin:14px 0; flex-wrap:wrap;}
+  .shot-placeholder{
+    flex:1; min-width:140px; aspect-ratio:16/10;
+    border:1px dashed var(--line); border-radius:var(--radius);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--text-dim); font-size:0.75rem; text-align:center; padding:8px;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .repo-link{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:'IBM Plex Mono', monospace; font-size:0.82rem;
+    margin-top:4px;
+  }
 
   /* ---------- VEILLE ---------- */
   .veille-list{
@@ -482,8 +495,10 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">Profil</a></li>
         <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#patrimoine">Patrimoine</a></li>
         <li><a href="#skills">Compétences</a></li>
         <li><a href="#projects">Projets</a></li>
+        <li><a href="#entreprise">Entreprise</a></li>
         <li><a href="#veille">Veille</a></li>
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -505,6 +520,7 @@
       <div class="btn-row">
         <a href="#projects" class="btn btn-primary">Voir mes projets</a>
         <a href="#" class="btn btn-secondary">Télécharger mon CV</a>
+        <a href="https://linkedin.com/in/ilyes-obbadi" class="btn btn-secondary">Profil LinkedIn</a>
       </div>
     </div>
 
@@ -568,6 +584,12 @@
       <p>
         Sérieux, sociable et motivé, j'apprécie le travail en équipe et le dépannage informatique. Ma formation et mon alternance me permettent de gagner progressivement en autonomie et en expérience.
       </p>
+      <p>
+        <strong style="color:var(--text);">Parcours scolaire :</strong> après un Baccalauréat, je poursuis actuellement un BTS Services Informatiques aux Organisations (SIO), option Solutions d'Infrastructure, Systèmes et Réseaux (SISR), en alternance sur deux ans (2025–2027).
+      </p>
+      <p>
+        <strong style="color:var(--text);">Parcours professionnel :</strong> je suis actuellement en alternance chez <strong>Prisma Media</strong>, où j'interviens sur la gestion du parc informatique (matériel, salles de réunion, périphériques) au sein du support IT. Retrouvez le détail de cette expérience dans la section « Entreprise » ci-dessous, ainsi que mon CV complet et mon profil LinkedIn en téléchargement / en lien.
+      </p>
     </div>
     <dl class="specs">
       <div><dt>Formation</dt><dd>BTS SIO — SISR</dd></div>
@@ -575,6 +597,10 @@
       <div><dt>Année</dt><dd>2025–2027</dd></div>
       <div><dt>Localisation</dt><dd>Conflans-Saint-Honorine</dd></div>
       <div><dt>Disponibilité</dt><dd>Alternance</dd></div>
+      <div><dt>Entreprise</dt><dd>Prisma Media</dd></div>
+      <div><dt>CV</dt><dd><a href="#">Télécharger (PDF)</a></dd></div>
+      <div><dt>LinkedIn</dt><dd><a href="https://linkedin.com/in/ilyes-obbadi">in/ilyes-obbadi</a></dd></div>
+      <div><dt>GitHub</dt><dd><a href="https://github.com/ilyes-obbadi">ilyes-obbadi</a></dd></div>
       <div><dt>Contact</dt><dd>ton-email@example.com</dd></div>
     </dl>
   </div>
@@ -687,6 +713,103 @@
   </div>
 </section>
 
+<section id="patrimoine" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Module M4 — Gestion du patrimoine informatique</p>
+      <h2>Gérer, sécuriser et faire évoluer un parc informatique</h2>
+    </div>
+    <div class="about-text" style="margin-bottom:36px;">
+      <p style="max-width:74ch;">
+        En SISR, « gérer le patrimoine informatique » signifie prendre en charge tout ce que possède une organisation en matière d'informatique : serveurs, postes, réseau, logiciels, données. Concrètement, cela passe par trois grandes missions apprises en cours et mises en pratique en laboratoire : <strong style="color:var(--text);">déployer</strong> les services qui font fonctionner le réseau, <strong style="color:var(--text);">maintenir et sécuriser</strong> ce qui existe déjà, et <strong style="color:var(--text);">documenter / auditer</strong> pour garder une vision claire de l'infrastructure.
+      </p>
+    </div>
+
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="expertise-icon">01</div>
+        <h3>Services réseau (création de serveurs)</h3>
+        <p>Installation et configuration des services cœur de réseau sous Windows Server, pratiqués en TP et en labo Proxmox :</p>
+        <ul style="color:var(--text-dim); font-size:0.87rem; padding-left:18px; margin-bottom:14px; line-height:1.7;">
+          <li><strong style="color:var(--text);">DHCP</strong> — attribution automatique des adresses IP, création d'étendues et de réservations</li>
+          <li><strong style="color:var(--text);">DNS</strong> — résolution de noms, zones directes/inversées, enregistrements</li>
+          <li><strong style="color:var(--text);">Active Directory (AD DS)</strong> — annuaire, comptes, unités d'organisation</li>
+          <li><strong style="color:var(--text);">GPO</strong> — stratégies de groupe appliquées aux postes et utilisateurs</li>
+          <li>Serveur de fichiers et d'impression, partages et droits NTFS</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">DHCP</span>
+          <span class="tag">DNS</span>
+          <span class="tag">AD DS</span>
+          <span class="tag">GPO</span>
+        </div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">02</div>
+        <h3>Maintenance & sécurisation</h3>
+        <p>Garder un parc fonctionnel et protégé dans la durée :</p>
+        <ul style="color:var(--text-dim); font-size:0.87rem; padding-left:18px; margin-bottom:14px; line-height:1.7;">
+          <li>Mises à jour système et correctifs de sécurité (patch management)</li>
+          <li>Politique de sauvegarde et plan de reprise d'activité (PRA)</li>
+          <li>Pare-feu, VPN et segmentation VLAN pour limiter les accès</li>
+          <li>Antivirus / EDR et durcissement des postes et serveurs</li>
+          <li>Gestion du cycle de vie du matériel (achat → mise en service → réforme)</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Sauvegarde</span>
+          <span class="tag">PRA</span>
+          <span class="tag">Pare-feu</span>
+          <span class="tag">Cycle de vie</span>
+        </div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">03</div>
+        <h3>Documentation & audit</h3>
+        <p>Garder une vision claire et vérifiable de l'infrastructure :</p>
+        <ul style="color:var(--text-dim); font-size:0.87rem; padding-left:18px; margin-bottom:14px; line-height:1.7;">
+          <li>Inventaire du matériel et des logiciels (qui a quoi, où, sous quelle licence)</li>
+          <li>Schémas réseau et procédures d'exploitation à jour</li>
+          <li>Audits de sécurité et de conformité (contrôle des accès, RGPD)</li>
+          <li>Suivi des incidents et tickets pour identifier les points à améliorer</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Inventaire</span>
+          <span class="tag">Audit</span>
+          <span class="tag">RGPD</span>
+          <span class="tag">Documentation</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sisr-panel">
+      <div>
+        <p class="kicker">Programme vu en cours — BTS SIO SISR</p>
+        <h3>Blocs de compétences liés au patrimoine informatique</h3>
+        <p>
+          Le référentiel SISR structure ces notions autour de plusieurs blocs : « Support et mise à disposition de services informatiques » (assistance, gestion des demandes), « Cybersécurité des services informatiques » (sécurisation, sauvegarde, supervision) et « Conception et déploiement de solutions d'infrastructure » (installation de serveurs et de services réseau).
+        </p>
+        <p>
+          Ces notions sont travaillées en travaux pratiques sur des plateformes de virtualisation (Proxmox, VMware) et de simulation réseau (Cisco Packet Tracer), avant d'être réinvesties en entreprise lors de l'alternance.
+        </p>
+      </div>
+      <div>
+        <h3 style="font-size:1rem; color:var(--text-dim); font-weight:500; margin-bottom:12px;">Notions clés du programme</h3>
+        <ul class="metier-list">
+          <li>Création et configuration de serveurs DHCP / DNS</li>
+          <li>Annuaire Active Directory et stratégies de groupe (GPO)</li>
+          <li>Adressage IP, VLAN, routage inter-VLAN</li>
+          <li>Virtualisation de serveurs (Proxmox, VMware)</li>
+          <li>Pare-feu, VPN et sécurisation des accès</li>
+          <li>Sauvegarde, RAID et plan de reprise d'activité</li>
+          <li>Supervision et gestion des incidents</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="skills" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="wrap">
     <div class="section-head">
@@ -723,15 +846,49 @@
         <div class="skill-row"><span class="label">Travail en équipe projet</span><span class="signal"><span class="on"></span><span class="on"></span><span class="on"></span><span></span></span></div>
       </div>
     </div>
+
+    <div style="margin-top:56px;">
+      <p class="kicker">Tableau de synthèse</p>
+      <h3 style="font-size:1.1rem; margin-bottom:6px;">Compétences professionnelles maîtrisées</h3>
+      <p style="color:var(--text-dim); font-size:0.88rem; max-width:62ch; margin-bottom:24px;">
+        Seules les compétences réellement mises en pratique et démontrables (en TP, en labo ou en entreprise) sont cochées ci-dessous.
+      </p>
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--line);">
+              <th style="text-align:left; padding:10px 12px; color:var(--text-dim); font-weight:500;">Compétence</th>
+              <th style="text-align:left; padding:10px 12px; color:var(--text-dim); font-weight:500;">Bloc de compétences (référentiel SIO)</th>
+              <th style="text-align:center; padding:10px 12px; color:var(--text-dim); font-weight:500;">Maîtrisée</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Installer et configurer un serveur DHCP / DNS</td><td style="padding:10px 12px; color:var(--text-dim);">Conception et déploiement d'infrastructure</td><td style="text-align:center; padding:10px 12px;">✅</td></tr>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Administrer un annuaire Active Directory et des GPO</td><td style="padding:10px 12px; color:var(--text-dim);">Conception et déploiement d'infrastructure</td><td style="text-align:center; padding:10px 12px;">✅</td></tr>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Configurer un réseau VLAN sur switch/routeur Cisco</td><td style="padding:10px 12px; color:var(--text-dim);">Conception et déploiement d'infrastructure</td><td style="text-align:center; padding:10px 12px;">✅</td></tr>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Déployer des machines virtuelles (Proxmox / VMware)</td><td style="padding:10px 12px; color:var(--text-dim);">Conception et déploiement d'infrastructure</td><td style="text-align:center; padding:10px 12px;">✅</td></tr>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Mettre en place une politique de sauvegarde</td><td style="padding:10px 12px; color:var(--text-dim);">Cybersécurité des services informatiques</td><td style="text-align:center; padding:10px 12px;">✅</td></tr>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Configurer un pare-feu / des règles de filtrage</td><td style="padding:10px 12px; color:var(--text-dim);">Cybersécurité des services informatiques</td><td style="text-align:center; padding:10px 12px;">✅</td></tr>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Superviser une infrastructure et diagnostiquer un incident</td><td style="padding:10px 12px; color:var(--text-dim);">Cybersécurité des services informatiques</td><td style="text-align:center; padding:10px 12px;">⬜</td></tr>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Gérer un parc informatique (inventaire, suivi matériel)</td><td style="padding:10px 12px; color:var(--text-dim);">Support et mise à disposition de services</td><td style="text-align:center; padding:10px 12px;">✅</td></tr>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Assurer un support utilisateur N1/N2 et gérer des tickets</td><td style="padding:10px 12px; color:var(--text-dim);">Support et mise à disposition de services</td><td style="text-align:center; padding:10px 12px;">✅</td></tr>
+            <tr><td style="padding:10px 12px;">Automatiser des tâches avec PowerShell / Bash</td><td style="padding:10px 12px; color:var(--text-dim);">Support et mise à disposition de services</td><td style="text-align:center; padding:10px 12px;">⬜</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="projects">
   <div class="wrap">
     <div class="section-head">
-      <p class="kicker">Réalisations</p>
+      <p class="kicker">Réalisations — Projets Personnalisés Encadrés (PPE)</p>
       <h2>Projets & interventions</h2>
     </div>
+    <p style="color:var(--text-dim); max-width:74ch; margin-bottom:28px;">
+      Les PPE sont des projets réalisés en groupe pendant la formation, encadrés par un professeur, sur un sujet et des technologies choisis par les étudiants. Voici les trois PPE que j'ai menés, avec les technologies utilisées et un lien vers le dépôt GitHub associé.
+    </p>
 
     <div class="ticket">
       <div class="ticket-head">
@@ -748,10 +905,15 @@
           <span class="tag">GPO</span>
           <span class="tag">DNS/DHCP</span>
         </div>
+        <div class="shot-row">
+          <div class="shot-placeholder">Capture — console Active Directory</div>
+          <div class="shot-placeholder">Capture — schéma de l'infrastructure Proxmox</div>
+        </div>
         <div class="ticket-fields">
           <div><span class="k">Environnement</span>Infrastructure de test / entreprise</div>
           <div><span class="k">Résultat</span>Infrastructure fonctionnelle et services testés</div>
         </div>
+        <a class="repo-link" href="https://github.com/ilyes-obbadi/ad-proxmox-lab">↗ Dépôt GitHub du projet</a>
       </div>
     </div>
 
@@ -770,10 +932,15 @@
           <span class="tag">Trunk 802.1Q</span>
           <span class="tag">Routage inter-VLAN</span>
         </div>
+        <div class="shot-row">
+          <div class="shot-placeholder">Capture — topologie Packet Tracer</div>
+          <div class="shot-placeholder">Capture — configuration des VLAN en CLI</div>
+        </div>
         <div class="ticket-fields">
           <div><span class="k">Environnement</span>Laboratoire Packet Tracer</div>
           <div><span class="k">Résultat</span>Infrastructure fonctionnelle et services testés</div>
         </div>
+        <a class="repo-link" href="https://github.com/ilyes-obbadi/vlan-segmentation">↗ Dépôt GitHub du projet</a>
       </div>
     </div>
 
@@ -791,9 +958,111 @@
           <span class="tag">NAS</span>
           <span class="tag">Plan de reprise</span>
         </div>
+        <div class="shot-row">
+          <div class="shot-placeholder">Capture — configuration RAID / NAS</div>
+          <div class="shot-placeholder">Capture — planification des sauvegardes</div>
+        </div>
         <div class="ticket-fields">
           <div><span class="k">Environnement</span>Environnement de laboratoire</div>
           <div><span class="k">Résultat</span>Infrastructure fonctionnelle et services testés</div>
+        </div>
+        <a class="repo-link" href="https://github.com/ilyes-obbadi/politique-sauvegarde">↗ Dépôt GitHub du projet</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="entreprise">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Expérience en entreprise</p>
+      <h2>Alternance — Gestion du parc informatique chez Prisma Media</h2>
+    </div>
+    <p style="color:var(--text-dim); max-width:74ch; margin-bottom:32px;">
+      Au sein du support IT de Prisma Media, je prends en charge la gestion quotidienne du parc informatique de l'entreprise : du suivi du matériel jusqu'à sa sortie de parc, en passant par l'administration à distance des équipements partagés (salles de réunion, copieurs).
+    </p>
+
+    <div class="ticket">
+      <div class="ticket-head">
+        <h3>Suivi et gestion du matériel informatique</h3>
+        <span class="ticket-ref mono">ENT #01</span>
+      </div>
+      <div class="ticket-body">
+        <p>
+          Tenue à jour de l'inventaire du parc (postes, écrans, téléphones, périphériques) : attribution du matériel aux collaborateurs, mise à jour de la base d'inventaire à chaque mouvement, préparation des équipements pour les nouveaux arrivants et récupération lors des départs.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Inventaire</span>
+          <span class="tag">Gestion de parc</span>
+          <span class="tag">Attribution matériel</span>
+        </div>
+        <div class="ticket-fields">
+          <div><span class="k">Fréquence</span>Quotidienne</div>
+          <div><span class="k">Résultat</span>Parc à jour et traçable en permanence</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-head">
+        <h3>Retour au broker & retour SAV</h3>
+        <span class="ticket-ref mono">ENT #02</span>
+      </div>
+      <div class="ticket-body">
+        <p>
+          Gestion des fins de vie du matériel : préparation, effacement des données et expédition du matériel en location vers le <strong style="color:var(--text);">broker</strong> (prestataire de leasing informatique) en fin de contrat, ainsi que la prise en charge des retours <strong style="color:var(--text);">SAV</strong> (matériel en panne) — diagnostic préalable, ouverture du dossier auprès du fabricant ou du revendeur, suivi jusqu'au remplacement ou à la réparation.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Leasing / broker</span>
+          <span class="tag">SAV</span>
+          <span class="tag">Effacement de données</span>
+          <span class="tag">Diagnostic panne</span>
+        </div>
+        <div class="ticket-fields">
+          <div><span class="k">Processus</span>Diagnostic → dossier → suivi → clôture</div>
+          <div><span class="k">Résultat</span>Traçabilité complète du cycle de vie du matériel</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-head">
+        <h3>Suivi et gestion des salles de réunion (Google Meet)</h3>
+        <span class="ticket-ref mono">ENT #03</span>
+      </div>
+      <div class="ticket-body">
+        <p>
+          Administration des équipements de visioconférence des salles de réunion (kits Google Meet) : vérification quotidienne du bon fonctionnement (caméra, micro, écran, connexion), résolution des incidents signalés par les utilisateurs, et suivi de la disponibilité des salles pour garantir leur bon fonctionnement au quotidien.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Google Meet</span>
+          <span class="tag">Salles de réunion</span>
+          <span class="tag">Support N1</span>
+        </div>
+        <div class="ticket-fields">
+          <div><span class="k">Environnement</span>Salles équipées Google Meet Hardware</div>
+          <div><span class="k">Résultat</span>Réduction des incidents en réunion</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-head">
+        <h3>Gestion des copieurs à distance</h3>
+        <span class="ticket-ref mono">ENT #04</span>
+      </div>
+      <div class="ticket-body">
+        <p>
+          Administration à distance de la flotte de copieurs/imprimantes multifonctions de l'entreprise : suivi des niveaux de consommables (toner, papier), déclaration des pannes auprès du prestataire, suivi des interventions, et accompagnement des utilisateurs sur les fonctions d'impression, de scan et de numérisation.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Administration à distance</span>
+          <span class="tag">Copieurs / imprimantes</span>
+          <span class="tag">Suivi consommables</span>
+        </div>
+        <div class="ticket-fields">
+          <div><span class="k">Modalité</span>Gestion centralisée à distance</div>
+          <div><span class="k">Résultat</span>Continuité de service sur l'ensemble du parc d'impression</div>
         </div>
       </div>
     </div>
@@ -806,6 +1075,9 @@
       <p class="kicker">Veille technologique</p>
       <h2>Ce que je suis en ce moment</h2>
     </div>
+    <p style="color:var(--text-dim); max-width:74ch; margin-bottom:28px;">
+      J'ai choisi la <strong style="color:var(--text);">cybersécurité des infrastructures</strong> comme sujet de veille principal, car c'est un domaine en évolution constante et directement lié à mon option SISR : une faille ou une mauvaise configuration découverte aujourd'hui peut affecter directement les infrastructures que j'administre.
+    </p>
     <div class="veille-list">
       <div class="veille-item">
         <h3>Cybersécurité</h3>
@@ -818,6 +1090,14 @@
       <div class="veille-item">
         <h3>Outils d'administration</h3>
         <p>Découverte et suivi des outils permettant d'administrer, superviser et automatiser les infrastructures informatiques.</p>
+      </div>
+      <div class="veille-item">
+        <h3>Outils de veille</h3>
+        <p><strong style="color:var(--text);">Google Alerts</strong> (alertes mots-clés sur les CVE et failles critiques), <strong style="color:var(--text);">Feedly</strong> (agrégation de flux RSS de sites spécialisés type CERT-FR, ANSSI, ZDNet Sécurité) et <strong style="color:var(--text);">X / Twitter</strong> (comptes d'experts et de chercheurs en sécurité) pour une information au fil de l'eau.</p>
+      </div>
+      <div class="veille-item">
+        <h3>Impact sur mon domaine</h3>
+        <p>Cette veille me permet d'anticiper les correctifs à appliquer sur les infrastructures que j'administre, de comprendre les nouvelles menaces (rançongiciels, failles zero-day) et d'adapter les configurations réseau, pare-feu et sauvegarde en conséquence — un réflexe indispensable pour un futur administrateur systèmes et réseaux.</p>
       </div>
     </div>
   </div>
@@ -832,18 +1112,18 @@
     <div class="timeline">
       <div class="tl-item" data-n="1">
         <p class="tl-date">2025 — Aujourd'hui</p>
-        <h3>Prisma Media — Alternance</h3>
-        <p>Gestion du parc informatique, préparation et suivi des ordinateurs et téléphones professionnels, ainsi que traitement des demandes et assistance aux collaborateurs. Cette expérience me permet de développer mon autonomie, mon diagnostic et mon sens du service.</p>
+        <h3>BTS SIO — option SISR</h3>
+        <p>Formation orientée systèmes, réseaux, sécurité et administration informatique, avec des travaux pratiques sur Linux, Windows, Cisco, DHCP, DNS, VLAN, Proxmox et les pare-feu. Voir le détail du <a href="#expertise">programme</a> et de la <a href="#patrimoine">gestion du patrimoine informatique</a>.</p>
       </div>
       <div class="tl-item" data-n="2">
         <p class="tl-date">2025 — Aujourd'hui</p>
-        <h3>Formation & projets BTS SIO</h3>
-        <p>Gestion du parc informatique, préparation et suivi des ordinateurs et téléphones professionnels, ainsi que traitement des demandes et assistance aux collaborateurs. Cette expérience me permet de développer mon autonomie, mon diagnostic et mon sens du service.</p>
+        <h3>Prisma Media — Alternance, support IT</h3>
+        <p>Gestion du parc informatique : suivi et inventaire du matériel, retours au broker et au SAV, administration des salles de réunion Google Meet et gestion à distance des copieurs. Cette expérience me permet de développer mon autonomie, mon diagnostic et mon sens du service. Détail dans la section <a href="#entreprise">Entreprise</a>.</p>
       </div>
       <div class="tl-item" data-n="3">
-        <p class="tl-date">2025 — Aujourd'hui</p>
-        <h3>BTS SIO — option SISR</h3>
-        <p>Formation orientée systèmes, réseaux, sécurité et administration informatique, avec des travaux pratiques sur Linux, Windows, Cisco, DHCP, DNS, VLAN, Proxmox et les pare-feu.</p>
+        <p class="tl-date">Projets encadrés (PPE)</p>
+        <h3>Réalisation de projets d'infrastructure</h3>
+        <p>Mise en pratique en laboratoire : déploiement d'un annuaire Active Directory, segmentation réseau par VLAN et mise en place d'une politique de sauvegarde. Voir le détail dans la section <a href="#projects">Projets</a>.</p>
       </div>
     </div>
   </div>
@@ -866,7 +1146,7 @@
 </section>
 
 <footer>
-  <div class="wrap">Portfolio BTS SIO — option SISR · [Ilyes Obbadi] · 2026</div>
+  <div class="wrap">Portfolio BTS SIO — option SISR · Ilyes Obbadi · 2026</div>
 </footer>
 
 <script>
