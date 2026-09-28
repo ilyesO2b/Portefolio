@@ -241,6 +241,67 @@
   dl.specs dt{color:var(--text-dim); font-size:0.9rem;}
   dl.specs dd{font-family:'IBM Plex Mono', monospace; font-size:0.88rem; text-align:right;}
 
+  /* ---------- EXPERTISE ---------- */
+  .expertise-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+  }
+  @media (max-width:900px){ .expertise-grid{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:600px){ .expertise-grid{grid-template-columns:1fr;} }
+  .expertise-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-top:3px solid var(--accent-2);
+    border-radius:var(--radius);
+    padding:24px 22px;
+    transition:transform 0.15s, border-color 0.15s;
+  }
+  .expertise-card:nth-child(odd){border-top-color:var(--accent);}
+  .expertise-card:hover{transform:translateY(-3px); border-color:var(--text-dim);}
+  .expertise-icon{
+    width:34px; height:34px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color:var(--accent);
+    margin-bottom:16px;
+  }
+  .expertise-card:nth-child(even) .expertise-icon{color:var(--accent-2);}
+  .expertise-card h3{font-size:1.02rem; margin-bottom:8px;}
+  .expertise-card p{color:var(--text-dim); font-size:0.87rem; margin-bottom:14px;}
+
+  .sisr-panel{
+    margin-top:56px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:var(--surface-2);
+    padding:40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:44px;
+  }
+  @media (max-width:780px){ .sisr-panel{grid-template-columns:1fr; padding:28px;} }
+  .sisr-panel .kicker{margin-bottom:10px;}
+  .sisr-panel h3{font-size:1.15rem; margin-bottom:16px;}
+  .sisr-panel p{color:var(--text-dim); max-width:52ch; margin-bottom:14px;}
+  .sisr-panel p:last-of-type{margin-bottom:0;}
+  .metier-list{list-style:none;}
+  .metier-list li{
+    display:flex; align-items:center; gap:10px;
+    padding:11px 0;
+    border-bottom:1px solid var(--line);
+    font-size:0.92rem;
+  }
+  .metier-list li:last-child{border-bottom:none;}
+  .metier-list li::before{
+    content:"▸";
+    color:var(--accent);
+    font-size:0.78rem;
+  }
+
   /* ---------- SKILLS ---------- */
   .skills-grid{
     display:grid;
@@ -420,6 +481,7 @@
     <nav>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">Profil</a></li>
+        <li><a href="#expertise">Expertise</a></li>
         <li><a href="#skills">Compétences</a></li>
         <li><a href="#projects">Projets</a></li>
         <li><a href="#veille">Veille</a></li>
@@ -513,10 +575,115 @@
       <div><dt>Année</dt><dd>2025–2027</dd></div>
       <div><dt>Localisation</dt><dd>Conflans-Saint-Honorine</dd></div>
       <div><dt>Disponibilité</dt><dd>Alternance</dd></div>
-      <div><dt>Poste actuel</dt><dd>Alternant support informatique — Prisma Media</dd></div>
-      <div><dt>Email</dt><dd><a href="mailto:ilyesobbadi@gmail.com">ilyesobbadi@gmail.com</a></dd></div>
-      <div><dt>Téléphone</dt><dd><a href="tel:+33633562898">06 33 56 28 98</a></dd></div>
+      <div><dt>Contact</dt><dd>ton-email@example.com</dd></div>
     </dl>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Domaines d'expertise</p>
+      <h2>Mes domaines de compétences</h2>
+    </div>
+
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="expertise-icon">RI</div>
+        <h3>Réseaux & Infrastructure</h3>
+        <p>Configuration et déploiement d'équipements Cisco, VLANs, routage statique et dynamique (OSPF, RIP), adressage IPv4/IPv6 et VLSM.</p>
+        <div class="tag-row">
+          <span class="tag">Cisco</span>
+          <span class="tag">VLAN</span>
+          <span class="tag">Routage</span>
+          <span class="tag">IPv4/IPv6</span>
+        </div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">CS</div>
+        <h3>Cybersécurité</h3>
+        <p>Sécurisation des systèmes d'information, gestion des GPO, Active Directory, contrôle des accès et sensibilisation aux risques.</p>
+        <div class="tag-row">
+          <span class="tag">GPO</span>
+          <span class="tag">Active Directory</span>
+          <span class="tag">ACL</span>
+          <span class="tag">ANSSI</span>
+        </div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">AS</div>
+        <h3>Administration Systèmes</h3>
+        <p>Windows Server 2019/2022, Linux Debian/Ubuntu, déploiement WAPT, migrations OS, scripting PowerShell et Bash.</p>
+        <div class="tag-row">
+          <span class="tag">Windows Server</span>
+          <span class="tag">Linux</span>
+          <span class="tag">WAPT</span>
+          <span class="tag">PowerShell</span>
+        </div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">SM</div>
+        <h3>Supervision & Monitoring</h3>
+        <p>Medulla, outils de supervision réseau, SNMP, diagnostic d'incidents, alerting et tableaux de bord de performance.</p>
+        <div class="tag-row">
+          <span class="tag">Medulla</span>
+          <span class="tag">SNMP</span>
+          <span class="tag">Monitoring</span>
+          <span class="tag">Alerting</span>
+        </div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">ST</div>
+        <h3>Support Technique</h3>
+        <p>Interventions N1/N2, dépannage hardware et software, gestion de tickets, relation utilisateurs et documentation.</p>
+        <div class="tag-row">
+          <span class="tag">Ticketing</span>
+          <span class="tag">N1/N2</span>
+          <span class="tag">Hardware</span>
+          <span class="tag">Relation client</span>
+        </div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">GP</div>
+        <h3>Gestion de Projet</h3>
+        <p>Conduite de projet informatique, rédaction de documentation technique, reporting, planification et suivi de livraisons.</p>
+        <div class="tag-row">
+          <span class="tag">Documentation</span>
+          <span class="tag">Reporting</span>
+          <span class="tag">Planification</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sisr-panel">
+      <div>
+        <p class="kicker">Option SISR</p>
+        <h3>Solutions d'infrastructure, systèmes et réseaux</h3>
+        <p>
+          L'option SISR forme des professionnels des réseaux et équipements informatiques, que ce soit pour l'installation, la maintenance ou la sécurité des infrastructures.
+        </p>
+        <p>
+          En choisissant cette option, les techniciens supérieurs en informatique peuvent accéder à un large éventail de métiers liés à l'administration et à l'exploitation des systèmes et réseaux.
+        </p>
+      </div>
+      <div>
+        <h3 style="font-size:1rem; color:var(--text-dim); font-weight:500; margin-bottom:12px;">Débouchés métiers</h3>
+        <ul class="metier-list">
+          <li>Administrateur systèmes et réseaux</li>
+          <li>Informaticien support et déploiement</li>
+          <li>Pilote d'exploitation</li>
+          <li>Support systèmes et réseaux</li>
+          <li>Technicien d'infrastructure</li>
+          <li>Technicien de production</li>
+          <li>Technicien micro et réseaux</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -690,10 +857,9 @@
         <p>Actuellement en alternance dans le domaine informatique. N'hésitez pas à me contacter pour échanger sur mon parcours.</p>
       </div>
       <div class="contact-links">
-        <a href="mailto:ilyesobbadi@gmail.com">ilyesobbadi@gmail.com</a>
-        <a href="tel:+33633562898">06 33 56 28 98</a>
+        <a href="mailto:ton-email@example.com">ton-email@example.com</a>
         <a href="#">linkedin.com/in/ilyes-obbadi</a>
-        <a href="https://github.com/ilyesO2b" target="_blank" rel="noopener">github.com/ilyesO2b</a>
+        <a href="#">github.com/ilyes-obbadi</a>
       </div>
     </div>
   </div>
